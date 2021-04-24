@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191520"
+    android:padding="30dp"
+    tools:context=".Activities.Settings">
+
+    <ImageView
+        android:id="@+id/button"
+        android:layout_width="18dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back"
+        android:onClick="navigateBack" />
+
+    <TextView
+        android:id="@+id/tvSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/settings"
+        android:layout_marginVertical="25dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tvAccountSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/tvSettings"
+        android:layout_marginVertical="30dp"
+        android:text="@string/account_settings"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_bold"
+        />
+
+
+
+    <TextView
+        android:id="@+id/changeUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginVertical="6dp"
+        android:layout_below="@id/tvAccountSettings"
+        android:text="@string/change_display_name"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"
+        android:onClick="changeDisplayName"/>
+
+    <TextView
+        android:id="@+id/changePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/changeUsername"
+        android:text="@string/change_password"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"
+        android:onClick="changePassword"
+        android:layout_marginVertical="6dp"/>
+
+    <TextView
+        android:id="@+id/deleteAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/changePassword"
+        android:text="@string/delete_account"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"
+        android:onClick="deleteAccount"
+        android:layout_marginVertical="6dp"/>
+
+
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#F33939"
+        android:text="@string/log_out"
+        android:textSize="18sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:textAllCaps="false"
+        android:onClick="logOut"/>
+
+</RelativeLayout>

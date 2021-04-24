@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Activities.QuizMovies">
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".Activities.QuizTvShows"
+        android:padding="24dp"
+        >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/movies" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/question"
+            android:layout_alignParentEnd="true"/>
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="512dp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="24dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/pass"
+            android:tag="pass"
+            android:onClick="getOpinion"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/delete"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:id="@+id/dislike"
+            android:tag="dislike"
+            android:onClick="getOpinion"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dislike"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/like"
+            android:tag="like"
+            android:onClick="getOpinion"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/like"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="#F33939" />
+    </LinearLayout>
+</FrameLayout>

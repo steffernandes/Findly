@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+         <item
+             android:id="@+id/movies"
+             android:enabled="true"
+             android:icon="@drawable/movie"
+             android:title=""/>
+
+        <item
+            android:id="@+id/tv_shows"
+            android:enabled="true"
+            android:icon="@drawable/tv_show"
+            android:title=""/>
+
+        <item
+            android:id="@+id/discover"
+            android:enabled="true"
+            android:icon="@drawable/discover"
+            android:title=""/>
+
+        <item
+            android:id="@+id/profile"
+            android:enabled="true"
+            android:icon="@drawable/profile"
+            android:title=""/>
+
+
+    </menu>
+

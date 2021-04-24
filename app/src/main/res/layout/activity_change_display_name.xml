@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191520"
+    android:padding="32dp"
+    tools:context=".Activities.ChangeDisplayName">
+
+
+    <ImageView
+        android:id="@+id/goBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="navigateBack"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goBack"
+        android:id="@+id/title"
+        android:text="@string/change_display_name_title"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:fontFamily="@font/roboto_bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginVertical="12dp"
+        android:textColor="#F33939"
+        android:text=""
+        android:textSize="16dp"
+        android:id="@+id/error"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_display_name"
+        android:layout_below="@id/title"
+        android:textColor="@color/white"
+        android:id="@+id/tvDisplayName"
+        android:layout_marginTop="80dp"
+        />
+
+    <EditText
+        android:id="@+id/displayName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tvDisplayName"
+        android:backgroundTint="#F7FFE2"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"
+        android:importantForAutofill="no"
+        />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@drawable/btn_rounded"
+        android:onClick="changeDisplayName"
+
+        />
+
+</RelativeLayout>

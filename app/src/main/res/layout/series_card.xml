@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:scrollbarSize="0dp"
+    android:paddingHorizontal="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="464dp"
+    android:layout_marginVertical="20dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:id="@+id/cardView">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+
+    <FrameLayout
+        android:id="@+id/left_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/overlay_black">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete"
+            android:layout_gravity="center"/>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/right_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/overlay_black">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/watchlistt"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_below="@id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_title"
+        android:layout_marginRight="24dp"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        android:fontFamily="@font/roboto_bold"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_group"
+        android:layout_below="@id/movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        style="@style/Widget.MaterialComponents.ChipGroup"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@color/white"
+        app:chipBackgroundColor="@color/red" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/release_date"
+        android:layout_below="@id/chip_group"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"/>
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/star"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/release_date"
+        android:layout_below="@id/chip_group"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating"
+        android:layout_below="@id/chip_group"
+        android:layout_toRightOf="@id/star"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvOverview"
+        android:layout_below="@id/release_date"
+        android:text="@string/overview"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/roboto_bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:layout_below="@id/tvOverview"
+        android:autoSizeTextType="uniform"
+       android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/TvSeasons"
+    android:layout_below="@id/description"
+    android:text="@string/seasons"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    android:layout_marginVertical="20dp"
+    android:fontFamily="@font/roboto_bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seasons"
+        android:layout_below="@id/TvSeasons"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/roboto_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvStatus"
+        android:layout_below="@id/seasons"
+        android:text="@string/status"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/roboto_bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:layout_below="@id/tvStatus"
+        android:text="Released"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"/>
+
+</RelativeLayout>
+</ScrollView>
