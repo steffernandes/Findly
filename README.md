@@ -30,9 +30,9 @@ As someone who enjoys watching movies and tv shows I often spend more time searc
 
 ### Built With
  
-* [Java]
-* [Android Studio]
-* [Firebase]
+* Java
+* Android Studio
+* Firebase
  
  
 <!-- Libraries used -->
